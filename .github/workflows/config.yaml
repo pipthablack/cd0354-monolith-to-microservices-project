@@ -12,13 +12,13 @@ jobs:
       - name: Build container
         run: |
           docker build -t udagram-api-feed ./udagram-api-feed
-          docker tag udagram-api-feed pipthablack/udagram-api-feed:v1
+          docker tag udagram-api-feed pipthablack/udagram-api-feed:v3
           docker build -t udagram-api-user ./udagram-api-user
-          docker tag udagram-api-user pipthablack/udagram-api-user:v1
+          docker tag udagram-api-user pipthablack/udagram-api-user:v3
           docker build -t udagram-frontend ./udagram-frontend
-          docker tag udagram-frontend pipthablack/udagram-frontend:v1
+          docker tag udagram-frontend pipthablack/udagram-frontend:v3
           docker build -t udagram-reverseproxy ./udagram-reverseproxy
-          docker tag udagram-reverseproxy pipthablack/udagram-reverseproxy:v1
+          docker tag udagram-reverseproxy pipthablack/udagram-reverseproxy:v3
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push container
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:v1
-          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-user:v1
-          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-frontend:v1
-          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-reverseproxy:v1
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:v3
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-user:v3
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-frontend:v3
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-reverseproxy:v3

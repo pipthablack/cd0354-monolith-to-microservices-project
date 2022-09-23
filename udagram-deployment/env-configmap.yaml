@@ -5,9 +5,9 @@ metadata:
 data:
   POSTGRES_USERNAME: postgres
   POSTGRES_PASSWORD: postgress
-  POSTGRES_HOST: udagramproject.cqzgazpu0oo7.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: udagram.c5xcufgosi7s.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: myudagram-microservices
+  AWS_BUCKET: myudagram-microservice
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: testing
